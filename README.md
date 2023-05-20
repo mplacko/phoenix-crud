@@ -21,7 +21,7 @@ mvn clean install assembly:single
 - `$ chmod 770 ./hbase/phoenix-crud-0.0.1-SNAPSHOT-jar-with-dependencies.jar`
 - `$ chown <user>:<user> ./hbase/phoenix-crud-0.0.1-SNAPSHOT-jar-with-dependencies.jar`
 - `$ kinit -kt /etc/security/keytabs/<user>.keytab <user>`
-- `$ java -jar ./hbase/phoenix-crud-0.0.1-SNAPSHOT-jar-with-dependencies.jar "jdbc:phoenix:thin:url=https://<pqs.endpoint>:8765;serialization=PROTOBUF;authentication=SPNEGO;principal=<hdfs_user>@<realm>;keytab=/etc/security/keytabs/<hdfs_user>.keytab"
+- `$ java -jar ./hbase/phoenix-crud-0.0.1-SNAPSHOT-jar-with-dependencies.jar "jdbc:phoenix:thin:url=https://<pqs.endpoint>:8765;serialization=PROTOBUF;authentication=SPNEGO;principal=<hdfs_user>@<krb_realm>;keytab=/etc/security/keytabs/<hdfs_user>.keytab"
 
 ```sh
 Result
